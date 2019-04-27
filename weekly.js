@@ -58,6 +58,6 @@ async function updateReadMe(fileMeta) {
     geneWeekFile(meta)
     updateReadMe(meta)
   } else {
-    console.log("Force to this job at Monday, it should be a habit！🙂")
+    console.log("Force to do this job at Monday. It should be a habit！🙂")
   }
 })()
