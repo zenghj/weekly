@@ -1,0 +1,12 @@
+{
+  "name": "weekly",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node weekly.js",
+    "release": "git add . && git commit -m 'Update weekly item' && git push"
+  },
+  "repository": "git@github.com:zenghj/weekly.git",
+  "author": "zenghj <zenghj@outlook.com>",
+  "license": "MIT"
+}
