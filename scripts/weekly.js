@@ -1,23 +1,15 @@
 const path = require('path')
 const fs = require('fs')
-const util = require('util')
 const date = new Date()
-const readmeFilePath = path.resolve(__dirname, './README.md')
-
-const fsPromises = {
-  readdir: util.promisify(fs.readdir),
-  readFile: util.promisify(fs.readFile),
-  stat: util.promisify(fs.stat),
-  writeFile: util.promisify(fs.writeFile),
-  copyFile: util.promisify(fs.copyFile)
-}
+const readmeFilePath = path.resolve(__dirname, '../README.md')
+const { fsPromises } = require('./utils')
 
 function getFileMeta(date) {
   let year = date.getFullYear()
   let month = (date.getMonth() + 1 + '').padStart(2, '0')
   let day = (date.getDate() + '').padStart(2, '0')
   let dateStr = `${year}-${month}-${day}`
-  let relativePath = `./${year}/${dateStr}.md`
+  let relativePath = `../${year}/${dateStr}.md`
   return {
     absolute: path.resolve(__dirname, relativePath),
     relative: relativePath,
