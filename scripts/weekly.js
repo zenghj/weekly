@@ -12,7 +12,7 @@ function getFileMeta(date) {
   let relativePath = `../${year}/${dateStr}.md`
   return {
     absolute: path.resolve(__dirname, relativePath),
-    relative: relativePath,
+    relative: `./${year}/${dateStr}.md`,
     dateStr: dateStr
   }
 }
