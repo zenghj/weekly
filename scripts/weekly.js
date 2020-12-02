@@ -1,6 +1,6 @@
 const path = require('path')
 const fs = require('fs')
-const date = new Date('2020/11/23')
+const date = new Date()
 const readmeFilePath = path.resolve(__dirname, '../README.md')
 const { fsPromises } = require('./utils')
 
